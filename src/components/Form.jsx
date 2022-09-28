@@ -5,13 +5,13 @@ const Form = () => {
     <div>
         <form>
         <label for="chname">Cardholder Name:</label><br />
-        <input type="text" id="chname" name="chname" /><br />
+        <input type="text" id="chname" name="chname" onChange={e => e.preventDefault} /><br />
         <label for="fname">Card Number:</label><br />
-        <input type="text" id="fname" name="fname" /><br />
+        <input type="text" id="fname" name="fname" onChange={e => e.preventDefault}/><br />
         <label for="fname">Exp. Date:</label><br />
-        <input type="text" id="fname" name="fname" /><br />
+        <input type="text" id="fname" name="fname" onChange={e => e.preventDefault}/><br />
         <label for="fname">CVC:</label><br />
-          <input type="text" id="fname" name="fname" /><br />
+          <input type="text" id="fname" name="fname" onChange={e => e.preventDefault}/><br />
           </form>
     </div>
         )
