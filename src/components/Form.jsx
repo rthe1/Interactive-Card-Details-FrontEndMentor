@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { useFormContext } from '../context/FormCardContext';
+
 
 const Form = () => {
+
+  const {updateCVV, updateCardHolder, updateCardNumber} = useFormContext()
+
   return (
     <div>
         <form>
