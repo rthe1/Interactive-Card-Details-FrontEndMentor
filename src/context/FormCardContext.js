@@ -1,31 +1,21 @@
-import { useContext, useState, createContext } from "react";
+import { useState, createContext } from "react";
 
-const FormContext = createContext({});
+export const FormContext = createContext({});
 
-export function useFormContext () {
- return useContext(FormContext);
-}
+export const FormContextProvider = (props) => {
 
-
-
-
+  const [cardholder, setCardholder] = useState("");
+  const [cvv, setCVV] = useState(123);
+  const [cardnumber, setCardnumber] = useState(12345678900);
 
 
-
-export function FormContextProvider (children) {
-
-  const [cardholder, setCardholder] =  useState();
-const [cvv, setCVV] =  useState();
-const [cardnumber, setCardnumber] =  useState();
-
-
-const updateCardHolder = (e) => {setCardholder(e)};
-const updateCardNumber = (e) => {setCardnumber(e)}
-const updateCVV = (e) => {setCVV(e)}
+  const updateCardHolder = (e) => { setCardholder(e) };
+  const updateCardNumber = (e) => { setCardnumber(e) }
+  const updateCVV = (e) => { setCVV(e) }
 
   return (
-    <FormContext.Provider value={{updateCVV, updateCardHolder, updateCardNumber}}>
-      {children}
+    <FormContext.Provider value={{ updateCVV, updateCardHolder, updateCardNumber, cardholder, cvv, cardnumber }}>
+      {props.children}
     </FormContext.Provider>
   )
 }
