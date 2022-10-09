@@ -1,0 +1,12 @@
+.FrontCardImg {
+  position: relative;
+  background-color: aquamarine;
+  height: 200px;
+  width: 300px;
+}
+
+.frontcardinfo {
+position: absolute;
+top: 35px;
+left: 12.5px;
+}

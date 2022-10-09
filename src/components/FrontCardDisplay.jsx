@@ -1,15 +1,18 @@
 import React, { useContext } from 'react'
-// import FrontCardImg from "../resources/images/bg-card-front.png";
 import { FormContext } from '../context/FormCardContext';
+import FrontCard from "../images/bg-card-front.png";
+import "../styles/FrontCardDisplay.css";
 
 
-const CardDisplay = () => {
+
+const FrontCardDisplay = () => {
   const {cardholder, cardnumber} = useContext(FormContext);
   return (
     <div className="FrontCardImg">
-      {cardnumber}
+      <img src={FrontCard} alt="front-side-of-card"/>
+      <div className="frontcardinfo">{cardholder}{cardnumber}</div>
     </div>
   )
 }
 
-export default CardDisplay
+export default FrontCardDisplay

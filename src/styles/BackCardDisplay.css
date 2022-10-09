@@ -1,0 +1,10 @@
+.BackCardImg {
+  position: relative;
+  z-index: 1;
+}
+
+.backcardinfo {
+  position: absolute;
+  left: 24rem;
+  top: 12.5rem;
+  }
